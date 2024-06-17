@@ -1,0 +1,185 @@
+{
+    "articulos": [
+      {
+        "sku": "43423",
+        "nombre": "Balón de fútbol",
+        "cantidad": 10,
+        "precio": 25.99,
+        "descripcion": "Balón oficial de la Liga MX",
+        "categoria": "Fútbol",
+        "imagen": "https://th.bing.com/th/id/OIP.gBk8Dw-Wa1hRXYww6LWdrQHaHa?rs=1&pid=ImgDetMain"
+      },
+      {
+        "sku": "67890",
+        "nombre": "Raqueta de tenis",
+        "cantidad": 5,
+        "precio": 49.99,
+        "descripcion": "Raqueta profesional de alta calidad",
+        "categoria": "Tenis",
+        "imagen": "https://contents.mediadecathlon.com/p1516185/k$49c92c710a5f360eb4c953eb0dd5776a/sq/RAQUETA+DE+TENIS+ADULTO+BABOLAT+PURE+AERO+TEAM+AMARILLO.jpg"
+      },
+      {
+        "sku": "889833",
+        "nombre": "Zapatillas de tenis",
+        "cantidad": 58,
+        "precio": 56.99,
+        "descripcion": "Zapatillas all-court para tenis",
+        "categoria": "Tenis",
+        "imagen": "https://th.bing.com/th/id/R.ec7ae65daedce9984e0ee0652d09e8ab?rik=XZgssB817L2Uiw&riu=http%3a%2f%2fwww.tennisnuts.com%2fimages%2fproduct%2ffull%2fAERUS_Blu.jpg&ehk=hUeDw76YXSKptwfd9%2ftl8FBdlXhuxS59huXbrOvf82w%3d&risl=&pid=ImgRaw&r=0"
+      },
+      {
+        "sku": "9264529",
+        "nombre": "Guantes portero de futbol",
+        "cantidad": 32,
+        "precio": 23.99,
+        "descripcion": "Guantes de piel de alta calidad",
+        "categoria": "Fútbol",
+        "imagen": "https://th.bing.com/th/id/OIP.KOpOLv2su7MK9rf6XKugeAHaJY?rs=1&pid=ImgDetMain"
+      },
+      {
+        "sku": "1236362845",
+        "nombre": "Bate de baseball",
+        "cantidad": 12,
+        "precio": 15.99,
+        "descripcion": "Bate de aluminio ligero para baseball",
+        "categoria": "Baseball",
+        "imagen": "https://http2.mlstatic.com/bate-de-beisbol-easton-s500-bombona-29-barril-2-58-D_NQ_NP_369725-MLV25497677730_042017-F.jpg"
+      },
+      {
+        "sku": "7455309",
+        "nombre": "Banda para cabeza",
+        "cantidad": 5,
+        "precio": 9.99,
+        "descripcion": "Banda fabricada 100% de algodón",
+        "categoria": "Tenis",
+        "imagen": "https://th.bing.com/th/id/OIP.pRgWLdkt4P_eM3Pb5ZLGdQHaGF?rs=1&pid=ImgDetMain"
+      },
+      {
+        "sku": "AD002",
+        "nombre": "Raqueta de Tenis Wilson",
+        "cantidad": 50,
+        "precio": 89.99,
+        "descripcion": "Raqueta de tenis Wilson para jugadores de nivel intermedio, ofrece un equilibrio perfecto entre potencia y control.",
+        "categoria": "Tenis",
+        "imagen": "https://example.com/raqueta_tenis_wilson.jpg"
+      },
+      {
+        "sku": "42345652",
+        "nombre": "Zapatillas para correr",
+        "cantidad": 12,
+        "precio": 29.99,
+        "descripcion": "Zapatillas comodas con plantill ajustable para correr en cualquier tipo de superficie",
+        "categoria": "Atletismo",
+        "imagen": "https://example.com/raqueta_tenis.jpg"
+      },
+      {
+        "sku": "4325116",
+        "nombre": "Bicicleta de montaña",
+        "cantidad": 10,
+        "precio": 199.99,
+        "descripcion": "Bicicleta de montaña de 8 velocidades, marco de aluminio y llantas numero 16.",
+        "categoria": "Ciclismo",
+        "imagen": "https://example.com/balon_futbol.jpg"
+      },
+      {
+        "sku": "62351238",
+        "nombre": "Casco para ciclista",
+        "cantidad": 45,
+        "precio": 39.99,
+        "descripcion": "Casco fabricado en fibra de vidrio ofrece alta resistencia y ligereza al usuario",
+        "categoria": "Ciclismo",
+        "imagen": "https://example.com/raqueta_tenis.jpg"
+      },
+      {
+        "sku": "768537",
+        "nombre": "Balón de basketball",
+        "cantidad": 17,
+        "precio": 25.99,
+        "descripcion": "Balón oficial de la NBA",
+        "categoria": "Basketball",
+        "imagen": "https://example.com/balon_futbol.jpg"
+      },
+      {
+        "sku": "67089890",
+        "nombre": "Costal para box",
+        "cantidad": 5,
+        "precio": 69.99,
+        "descripcion": "Costal para boxeo relleno de aserrin",
+        "categoria": "Box",
+        "imagen": "https://example.com/raqueta_tenis.jpg"
+      },
+      {
+        "sku": "87262544",
+        "nombre": "Guantes para box",
+        "cantidad": 10,
+        "precio": 25.99,
+        "descripcion": "Guantes ligeros para entrenamiento",
+        "categoria": "Box",
+        "imagen": "https://example.com/balon_futbol.jpg"
+      },
+      {
+        "sku": "56473934",
+        "nombre": "Goggles de natación",
+        "cantidad": 35,
+        "precio": 9.99,
+        "descripcion": "Goggles de natación para adulto color verde",
+        "categoria": "Natación",
+        "imagen": "https://example.com/raqueta_tenis.jpg"
+      },
+      {
+        "sku": "826251833",
+        "nombre": "Set de pesas",
+        "cantidad": 3,
+        "precio": 55.99,
+        "descripcion": "Juego de pesas, incluye discos de 5, 10, 15 y 20lb",
+        "categoria": "Gym",
+        "imagen": "https://example.com/balon_futbol.jpg"
+      },
+      {
+        "sku": "65483836354",
+        "nombre": "Bastón de senderismo",
+        "cantidad": 9,
+        "precio": 39.99,
+        "descripcion": "Bastón para senderismo 130cm. Plegable colores varias prsentaciones",
+        "categoria": "Senderismo",
+        "imagen": "https://example.com/raqueta_tenis.jpg"
+      },
+      {
+        "sku": "6354382039373",
+        "nombre": "Mochila impermeable",
+        "cantidad": 4,
+        "precio": 65.99,
+        "descripcion": "Mochila impermeable para senderismo 60L",
+        "categoria": "Senderismo",
+        "imagen": "https://example.com/balon_futbol.jpg"
+      },
+      {
+        "sku": "66544335626",
+        "nombre": "Muñequeras para gym",
+        "cantidad": 35,
+        "precio": 12.99,
+        "descripcion": "Correas de muñecas para hombre y mujer",
+        "categoria": "Gym",
+        "imagen": "https://example.com/raqueta_tenis.jpg"
+      },
+      {
+        "sku": "664543388",
+        "nombre": "Patines para niño",
+        "cantidad": 7,
+        "precio": 23,
+        "descripcion": "Patines para niño color rojo, talla ajustable 3-5 MX",
+        "categoria": "Patinaje",
+        "imagen": "https://example.com/balon_futbol.jpg"
+      },
+      {
+        "sku": "6625242111",
+        "nombre": "Popote flotador",
+        "cantidad": 5,
+        "precio": 9.99,
+        "descripcion": "Popote flotador verde",
+        "categoria": "Natación",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_861523-MLM45277345748_032021-O.jpg"
+      }
+
+    ]
+  }

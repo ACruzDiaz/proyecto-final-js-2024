@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    font-size: 1rem;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.articulo-tienda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 16rem;
+    height: max-content;
+    border: 1px, solid, gray;
+    padding: 0.25rem;
+    button{
+        font-size: 0.75rem;
+        padding: 0.25rem ;
+    }
+    img{
+        object-fit: fill;
+        width: 100%;
+    }
+    h2{
+        font-size: 1.125rem;
+    }
+    p.price{
+        color: black;
+    }
+    p{
+        color: rgb(76, 82, 82);
+    }
+}
+
+.articulo-carro{
+    display: flex;
+    height: 5rem;
+    padding: 0.5rem 1rem;
+    img{
+        
+        object-fit: contain;
+        width: 12rem;
+    }
+    h2{
+        font-size: 1.125rem;
+    }
+    p.price{
+        color: black;
+    }
+    p{
+        color: rgb(76, 82, 82);
+    }
+}
+/* section#catalogo{
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: 1;
+    flex-basis: auto;
+    margin: 1rem; 
+} */
+ main{
+    display: flex;
+    justify-content: space-between;
+ }
