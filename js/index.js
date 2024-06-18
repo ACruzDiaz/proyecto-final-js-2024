@@ -66,7 +66,7 @@ d.addEventListener('DOMContentLoaded', e => {
         carrito.setState(JSON.parse(localStorage.getItem('articulosCarro')));
     }).catch((err) => {
         
-        alert("Error al cargar el archivo JSON: ", err);
+        Swal.fire("Error al cargar el archivo JSON: ", err);
     })
 
 
