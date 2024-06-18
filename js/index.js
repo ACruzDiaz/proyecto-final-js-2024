@@ -1,7 +1,9 @@
+
 let cLastState;
 const d = document,
     jsonURL = './json/articulos.json';
-    
+    const $graciasCompraPantalla = d.getElementById("compra-exitosa"),
+    $pagar = d.getElementById("btn-pagar");
 const mainArticulos = new Component({
     el: "#catalogo",
     data: {
@@ -38,15 +40,17 @@ const carrito = new Component({
     
         let templateItems = props.articulosCarro.map(item =>`<div id = "${item.sku}"class ="articulo-carro">
             <img src="${item.imagen}" alt="${item.descripcion}">
-            <button class="btn-eliminar"type="submit">Eliminar</button>
             <h2>${item.nombre}</h2>
+            <p>${item.cantidadCarro}</p>
             <p class='price'>$${item.precio}</p>
-            <p> - - ${item.cantidadCarro}</p>
+            <button class="btn-eliminar"type="submit">Eliminar</button>
             </div>`).join("");
         let templeteEstadoCarro = `<section>
-        <p>Articulos en el carro: ${props.estadoCarro.cantidadArticulos}</p>
-        <p>Total: ${props.estadoCarro.precioTotal}</p>
-        </section>`
+            <p>Articulos en el carro: ${props.estadoCarro.cantidadArticulos}</p>
+            <p>Total: $${props.estadoCarro.precioTotal}</p>
+            <button id="btn_pagar" type="submit">Pagar</button>
+            </section>
+            `
         templateItems += templeteEstadoCarro;
         return templateItems;
     }
@@ -134,7 +138,16 @@ d.addEventListener('click', e => {
             console.log(contarItemsCarrito());
         }
         
-        console.log(IDcart)
+    }
+    if(e.target.id == "btn_pagar"){
+        $graciasCompraPantalla.style.visibility = "visible";
+        document.body.style.overflow = "hidden";
+    }
+
+    if(e.target.className === "cross"){
+        
+        $graciasCompraPantalla.style.visibility = "hidden";
+        document.body.style.overflow = "auto";
     }
 
 });
@@ -148,9 +161,13 @@ const contarItemsCarrito = function(){
     carroTmp.articulosCarro.forEach(item => {
         totalItem += item.cantidadCarro;
         totalPrice += item.precio * item.cantidadCarro;
+        
     })
     return {cantidadArticulos: totalItem,
-            precioTotal : totalPrice,
+            precioTotal : totalPrice.toFixed(2),
     };  
 }
 
+const pagarCarrito = function(){
+
+}

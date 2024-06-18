@@ -61,7 +61,7 @@
         "precio": 89.99,
         "descripcion": "Raqueta de tenis Wilson para jugadores de nivel intermedio, ofrece un equilibrio perfecto entre potencia y control.",
         "categoria": "Tenis",
-        "imagen": "https://example.com/raqueta_tenis_wilson.jpg"
+        "imagen": "https://th.bing.com/th/id/OIP.wlNnwZvLHnPu_4fIjajosAHaHa?rs=1&pid=ImgDetMain"
       },
       {
         "sku": "42345652",
@@ -70,7 +70,7 @@
         "precio": 29.99,
         "descripcion": "Zapatillas comodas con plantill ajustable para correr en cualquier tipo de superficie",
         "categoria": "Atletismo",
-        "imagen": "https://example.com/raqueta_tenis.jpg"
+        "imagen": "https://th.bing.com/th/id/OIP.JDav90UiqiYk8aLT68yrmgHaHz?rs=1&pid=ImgDetMain"
       },
       {
         "sku": "4325116",
@@ -79,7 +79,7 @@
         "precio": 199.99,
         "descripcion": "Bicicleta de montaña de 8 velocidades, marco de aluminio y llantas numero 16.",
         "categoria": "Ciclismo",
-        "imagen": "https://example.com/balon_futbol.jpg"
+        "imagen": "https://th.bing.com/th/id/OIP.wlD7t_QIXBtL4XNB505wlwHaHa?rs=1&pid=ImgDetMain"
       },
       {
         "sku": "62351238",
@@ -88,7 +88,7 @@
         "precio": 39.99,
         "descripcion": "Casco fabricado en fibra de vidrio ofrece alta resistencia y ligereza al usuario",
         "categoria": "Ciclismo",
-        "imagen": "https://example.com/raqueta_tenis.jpg"
+        "imagen": "https://th.bing.com/th/id/OIP.-hg-3-XYbkoWQ3otJ0HmHAHaHa?rs=1&pid=ImgDetMain"
       },
       {
         "sku": "768537",
@@ -97,25 +97,25 @@
         "precio": 25.99,
         "descripcion": "Balón oficial de la NBA",
         "categoria": "Basketball",
-        "imagen": "https://example.com/balon_futbol.jpg"
+        "imagen": "https://contents.mediadecathlon.com/p298557/k$74a7f525136224fac43390162df7b775/sq/Bal+n+de+baloncesto+SPALDING+NBA+ALL+STAR+talla+7.jpg"
       },
       {
         "sku": "67089890",
-        "nombre": "Costal para box",
+        "nombre": "Costal para boxeo",
         "cantidad": 5,
         "precio": 69.99,
         "descripcion": "Costal para boxeo relleno de aserrin",
         "categoria": "Box",
-        "imagen": "https://example.com/raqueta_tenis.jpg"
+        "imagen": "https://th.bing.com/th/id/R.56b7fbfe512ac184a7880f2e7246a329?rik=nBPDuVNkotpyxw&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f0644%2f2981%2f8100%2fproducts%2f07G560.L.RELL_1200x1200.jpg%3fv%3d1652221659&ehk=hmAsmhfrpRH06K9rU59h7bFyOtxtgiOlwzwZER0AWrk%3d&risl=&pid=ImgRaw&r=0"
       },
       {
         "sku": "87262544",
-        "nombre": "Guantes para box",
+        "nombre": "Guantes para boxeo",
         "cantidad": 10,
         "precio": 25.99,
         "descripcion": "Guantes ligeros para entrenamiento",
         "categoria": "Box",
-        "imagen": "https://example.com/balon_futbol.jpg"
+        "imagen": "https://equiposdefitness.com/wp-content/uploads/2020/10/GN400J_04_1.jpg"
       },
       {
         "sku": "56473934",
@@ -124,7 +124,7 @@
         "precio": 9.99,
         "descripcion": "Goggles de natación para adulto color verde",
         "categoria": "Natación",
-        "imagen": "https://example.com/raqueta_tenis.jpg"
+        "imagen": "https://th.bing.com/th/id/OIP.W3ZYaRzj-Z2RkIjxHuCgkAHaHa?rs=1&pid=ImgDetMain"
       },
       {
         "sku": "826251833",
@@ -133,7 +133,7 @@
         "precio": 55.99,
         "descripcion": "Juego de pesas, incluye discos de 5, 10, 15 y 20lb",
         "categoria": "Gym",
-        "imagen": "https://example.com/balon_futbol.jpg"
+        "imagen": "https://th.bing.com/th/id/OIP.J0v9b2DwsK5hsqdGkYRrVwHaHa?rs=1&pid=ImgDetMain"
       },
       {
         "sku": "65483836354",
@@ -142,7 +142,7 @@
         "precio": 39.99,
         "descripcion": "Bastón para senderismo 130cm. Plegable colores varias prsentaciones",
         "categoria": "Senderismo",
-        "imagen": "https://example.com/raqueta_tenis.jpg"
+        "imagen": "https://th.bing.com/th/id/OIP.KniePpVbyIRTkqgc8BWG4QHaHa?rs=1&pid=ImgDetMain"
       },
       {
         "sku": "6354382039373",
@@ -151,7 +151,7 @@
         "precio": 65.99,
         "descripcion": "Mochila impermeable para senderismo 60L",
         "categoria": "Senderismo",
-        "imagen": "https://example.com/balon_futbol.jpg"
+        "imagen": "https://th.bing.com/th/id/OIP.rAJ5fhiNu_TIen_GtirqpQHaHa?rs=1&pid=ImgDetMain"
       },
       {
         "sku": "66544335626",
@@ -160,7 +160,7 @@
         "precio": 12.99,
         "descripcion": "Correas de muñecas para hombre y mujer",
         "categoria": "Gym",
-        "imagen": "https://example.com/raqueta_tenis.jpg"
+        "imagen": "https://th.bing.com/th/id/OIP.e54l1AMTtCmU7DlbWAeP-wHaHr?rs=1&pid=ImgDetMain"
       },
       {
         "sku": "664543388",
@@ -169,7 +169,7 @@
         "precio": 23,
         "descripcion": "Patines para niño color rojo, talla ajustable 3-5 MX",
         "categoria": "Patinaje",
-        "imagen": "https://example.com/balon_futbol.jpg"
+        "imagen": "https://th.bing.com/th/id/R.6855023ded69246ae00d25ae52bf0f8b?rik=SL83qRFZ4E8kIA&pid=ImgRaw&r=0"
       },
       {
         "sku": "6625242111",

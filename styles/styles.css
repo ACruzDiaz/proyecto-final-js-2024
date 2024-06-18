@@ -6,7 +6,128 @@
     text-decoration: none;
     list-style: none;
 }
+a{
+    all:unset;
+    cursor: pointer;    
+}
+body{
+    overflow: auto;
+}
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    nav {
+        padding-left: clamp(0.75rem, calc(-0.607rem + 6.786vw), 5.5rem);
+        color: white;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 4.5rem;
+        background: linear-gradient(rgba(48, 48, 48, 0.4), rgba(80, 80, 80, 0.2));
+        backdrop-filter: blur(5px);
 
+        .logo {
+            flex: 40;
+            justify-self: start;
+            a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: min-content;
+                height: 100%;
+                
+                img{
+                    margin: 0 1rem;
+                    padding: 0.25rem 0;
+                    width: 4.5rem;
+                    height: 4.5rem;
+                }
+            }
+
+        }
+
+        ul.nav-menu {
+            flex: 60;
+            justify-self: end;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 1rem;
+            padding: 0 1rem;
+
+            li{
+                a{
+                    all: unset;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .hamburguer
+        {
+            display: none;
+            cursor: pointer;
+            align-self: center;
+            margin: 0 2rem;
+            .bar
+            {
+                display: block;
+                width: 25px;
+                height: 3px;
+                margin: 5px;
+                background-color: white;
+                transition: linear 0.25s;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    header{
+        nav {
+            ul.nav-menu{
+                position: fixed;
+                left: 0;
+                top: -400%;
+                flex-direction: column;
+                gap: 2rem;
+                width: 100%;
+                text-align: center;
+                background: linear-gradient(rgb(48, 48, 48), rgba(80, 80, 80, 0.2));
+                background-color: black;
+                backdrop-filter: blur(5px);
+                padding: 3rem 0;
+                transition: linear 0.2s;
+
+            }
+            ul.nav-menu.activate
+            {
+                top: 72px;
+                left: 0;
+                transition: linear 0.2s;
+            }
+            .hamburguer
+            {
+                display: block;
+
+            }
+            .hamburguer.activate .bar:nth-child(2){
+                opacity: 0;
+            }
+            .hamburguer.activate .bar:nth-child(1){
+                transform: translateY(8px) rotate(45deg);
+                transition: linear 0.25s;
+            }
+            .hamburguer.activate .bar:nth-child(3){
+                transform: translateY(-8px) rotate(-45deg);
+                transition: linear 0.25s;
+            }
+        }
+    }
+
+}
 .articulo-tienda{
     display: flex;
     flex-direction: column;
@@ -14,7 +135,7 @@
     align-items: center;
     text-align: center;
     width: 16rem;
-    height: max-content;
+    height: auto;
     border: 1px, solid, gray;
     padding: 0.25rem;
     button{
@@ -22,8 +143,10 @@
         padding: 0.25rem ;
     }
     img{
-        object-fit: fill;
+        padding: 1rem 0;
+        object-fit: contain;
         width: 100%;
+        height: 15rem;
     }
     h2{
         font-size: 1.125rem;
@@ -37,32 +160,170 @@
 }
 
 .articulo-carro{
-    display: flex;
+    display: grid;
+    
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'img titulo cantidad precio'
+    'img borrar . .';
     height: 5rem;
-    padding: 0.5rem 1rem;
+    margin: 1.25rem 1rem;
     img{
-        
+        grid-area: img;
         object-fit: contain;
-        width: 12rem;
+        margin-right: 0.5rem;
+        width: 5rem;
+        height: 5rem;
+        
     }
     h2{
+        grid-area: titulo;
+        width: 14rem;
         font-size: 1.125rem;
+        padding: 0 0.5rem;
     }
     p.price{
+        grid-area: precio;
+        padding: 0 0.5rem;
+        font-size: 1.125rem;
+        width: 5rem;
         color: black;
+        text-align: center;
     }
     p{
+        grid-area: cantidad;
+        padding: 0 0.5rem;
         color: rgb(76, 82, 82);
     }
+    button{
+        height: 2rem;
+        width: 40%;
+        margin: 0 0.5rem;
+        padding: 0 0.25rem;
+        grid-area: borrar;
+        border-color: transparent;
+        background-color: orange;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
 }
-/* section#catalogo{
-    display: flex;
+section#catalogo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     flex-shrink: 0;
     flex-wrap: 1;
     flex-basis: auto;
     margin: 1rem; 
-} */
- main{
+} 
+
+
+main{
     display: flex;
     justify-content: space-between;
+    position: relative;
+    top: 70px;
+}
+
+ section#carrito{
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 80px;
+    right: 10px;
+    height: 95vh;
+    width: 450px;
+    background-color: white;
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        
+        button{
+            background-color: steelblue;
+            padding: 0.5rem;
+            border-color: transparent;
+            color: white;
+            border-radius: 0.5rem;
+            width: 5rem;
+            cursor: pointer;
+        }
+    }
  }
+
+aside#compra-exitosa{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.738);
+    height: 100dvh;
+    width: 100%;
+    div{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 200px;
+        width: 400px;
+        background-color: white;
+        div.cross{
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            
+            span.close:first-child{
+                position: absolute;
+            }
+            span.close{
+                pointer-events: none;
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                z-index: 1;
+                background-color: black;
+                
+            }
+            span.close:first-child{
+                rotate: 45deg;
+            }
+            span.close:last-child{
+
+                rotate: -45deg;
+            }
+
+        }
+    }
+}
+
+
+@media (max-width: 1440px) {
+    section#catalogo{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-shrink: 0;
+        flex-wrap: 1;
+        flex-basis: auto;
+        margin: 1rem; 
+    } 
+
+}
+
+@media (max-width: 1258px) {
+    section#catalogo{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        flex-shrink: 0;
+        flex-wrap: 1;
+        flex-basis: auto;
+        margin: 1rem; 
+    } 
+
+}
