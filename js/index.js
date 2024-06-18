@@ -1,9 +1,3 @@
-
-let cLastState;
-const d = document,
-    jsonURL = './json/articulos.json';
-    const $graciasCompraPantalla = d.getElementById("compra-exitosa"),
-    $pagar = d.getElementById("btn-pagar");
 const mainArticulos = new Component({
     el: "#catalogo",
     data: {
@@ -71,23 +65,19 @@ d.addEventListener('DOMContentLoaded', e => {
         mainArticulos.setState({listaArticulos: lastState.listaArticulos});
         carrito.setState(JSON.parse(localStorage.getItem('articulosCarro')));
     }).catch((err) => {
-        console.log("Error al cargar el archivo JSON: ", err)
+        
+        alert("Error al cargar el archivo JSON: ", err);
     })
 
 
 });
 
-const $botonAgregar = d.querySelector(".btn-agregar");
 d.addEventListener('click', e => {
-    
     if(e.target.className === 'btn-agregar'){
         e.preventDefault();
         cLastState = carrito.getState();
-        console.log("getStateCart: ", cLastState);
         const sku = e.target.parentElement.id;
-        console.log("SKU:" , sku)
         const articulo = mainArticulos.getState();
-        console.log("getStateMain: ", articulo);
         for (const key in articulo.listaArticulos) {
             if (articulo.listaArticulos[key].sku == sku) {
                 
@@ -111,7 +101,6 @@ d.addEventListener('click', e => {
         carrito.setState({articulosCarro: cLastState.articulosCarro});
         carrito.setState({estadoCarro: contarItemsCarrito()});
         localStorage.setItem('articulosCarro', JSON.stringify(carrito.getState()));
-        console.log(cLastState)
     }
     
     if(e.target.className === "btn-eliminar"){
@@ -122,20 +111,16 @@ d.addEventListener('click', e => {
         if(!foundedItem){
             return;
         }else{
-            console.log("Antes", cLastState.articulosCarro);
             cLastState.articulosCarro.find(p=>{
                 if(p?.sku === IDcart){
                     const index = cLastState.articulosCarro.indexOf(p);
-                    //console.log(index)
                     cLastState.articulosCarro.splice(index, 1);
-                    console.log('Despues',cLastState.articulosCarro);
                     
                 }
             });
             carrito.setState({articulosCarro: cLastState.articulosCarro});
             carrito.setState({estadoCarro: contarItemsCarrito()});
             localStorage.setItem('articulosCarro', JSON.stringify(carrito.getState()));
-            console.log(contarItemsCarrito());
         }
         
     }
@@ -166,8 +151,4 @@ const contarItemsCarrito = function(){
     return {cantidadArticulos: totalItem,
             precioTotal : totalPrice.toFixed(2),
     };  
-}
-
-const pagarCarrito = function(){
-
 }

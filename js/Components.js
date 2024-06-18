@@ -13,7 +13,6 @@ const Component = (function (){
         const $el = document.querySelector(this.el);
         if(!$el) return;
         $el.innerHTML = this.template(this.data);
-        //console.log(this.data);
     };
 
     //Set State

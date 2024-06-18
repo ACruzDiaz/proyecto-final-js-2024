@@ -225,7 +225,7 @@ main{
     top: 70px;
 }
 
- section#carrito{
+section#carrito{
     position: fixed;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -249,9 +249,10 @@ main{
             cursor: pointer;
         }
     }
- }
+}
 
 aside#compra-exitosa{
+    z-index: 20;
     visibility: hidden;
     display: flex;
     justify-content: center;
@@ -270,6 +271,7 @@ aside#compra-exitosa{
         height: 200px;
         width: 400px;
         background-color: white;
+        border-radius: 1rem;
         div.cross{
             cursor: pointer;
             position: absolute;
