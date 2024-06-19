@@ -231,21 +231,44 @@ section#carrito{
     overflow-x: hidden;
     top: 80px;
     right: 10px;
-    height: 95vh;
+    height: 85vh;
     width: 450px;
     background-color: white;
     section{
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        
-        button{
+        display: grid;
+        grid-template-columns: 1fr 0.75fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:". precio" 
+                            ". totale"
+                            "vaciar pagar";
+        align-items: center;
+        justify-items: end;
+
+        padding-right: 1.5rem;
+        p:first-of-type{
+            grid-area: precio;
+        }
+        p:last-of-type{
+            grid-area: totale;
+        }
+        button#btn_pagar{
+            grid-area: pagar;
             background-color: steelblue;
             padding: 0.5rem;
             border-color: transparent;
             color: white;
             border-radius: 0.5rem;
             width: 5rem;
+            cursor: pointer;
+        }
+        button#btn_vaciar{
+            grid-area: vaciar;
+            background-color: rgb(219, 75, 75);
+            padding: 0.5rem;
+            border-color: transparent;
+            color: white;
+            border-radius: 0.5rem;
+            width: 8rem;
             cursor: pointer;
         }
     }

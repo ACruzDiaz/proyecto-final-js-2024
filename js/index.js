@@ -17,7 +17,7 @@ const mainArticulos = new Component({
             </div>`).join("");
         return templateItems;
     },
-});
+}); 
 
 const carrito = new Component({
     el: "#carrito",
@@ -42,6 +42,7 @@ const carrito = new Component({
         let templeteEstadoCarro = `<section>
             <p>Articulos en el carro: ${props.estadoCarro.cantidadArticulos}</p>
             <p>Total: $${props.estadoCarro.precioTotal}</p>
+            <button id ="btn_vaciar" type ="submit">Vaciar Carrito</button>
             <button id="btn_pagar" type="submit">Pagar</button>
             </section>
             `
@@ -135,6 +136,10 @@ d.addEventListener('click', e => {
         document.body.style.overflow = "auto";
     }
 
+    if(e.target.id === "btn_vaciar"){
+        vaciarCarrito();
+    }
+
 });
 
 
@@ -151,4 +156,11 @@ const contarItemsCarrito = function(){
     return {cantidadArticulos: totalItem,
             precioTotal : totalPrice.toFixed(2),
     };  
+}
+
+const vaciarCarrito = function(){
+    carrito.setState({articulosCarro: [],
+        estadoCarro:{cantidadArticulos:0,
+                    precioTotal: 0,}});
+    localStorage.setItem('articulosCarro', JSON.stringify(carrito.getState()));
 }
