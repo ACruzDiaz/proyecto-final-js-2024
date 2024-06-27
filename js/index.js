@@ -51,6 +51,21 @@ const carrito = new Component({
     }
 });
 
+const categorias = new Component({
+    el: "#categorias-element",
+    data: {
+        listaArticulos:[]
+    },
+    template: function(props){
+        if(props.listaArticulos.length < 1){
+            return `<a href="#">( Vacio )</a>`
+        }
+        let templateCategorias = props.listaArticulos.map(item => `<a href="#${item}" id="${item}">${item}</a>`).join("");
+        console.log(templateCategorias)
+        return templateCategorias;
+    },
+
+});
 
 d.addEventListener('DOMContentLoaded', e => {
     fetch(jsonURL, {
@@ -59,10 +74,16 @@ d.addEventListener('DOMContentLoaded', e => {
         return res.ok ? res.json() : Promise.reject(res);
     }).then((jsonres) => {
         const lastState = mainArticulos.getState();
-
+        categoriasList = categorias.getState();
         jsonres.articulos.forEach(element => {
-            lastState.listaArticulos.push(element);    
+            lastState.listaArticulos.push(element);  
+            if(!categoriasList.listaArticulos.includes(element.categoria)){
+                
+                categoriasList.listaArticulos.push(element.categoria);
+            }
         });
+        console.log(categoriasList.listaArticulos);
+        categorias.setState({listaArticulos: categoriasList.listaArticulos});
         mainArticulos.setState({listaArticulos: lastState.listaArticulos});
         carrito.setState(JSON.parse(localStorage.getItem('articulosCarro')));
     }).catch((err) => {
@@ -139,6 +160,16 @@ d.addEventListener('click', e => {
     if(e.target.id === "btn_vaciar"){
         vaciarCarrito();
     }
+
+    if(e.target.id === "categorias"){
+        $categoriasIl.style.height = "auto";
+        $categoriasIl.style.padding = "0.5rem 0.75rem";
+        $categoriasIl.style.transition = " ease 0.2s"
+    }else{
+        $categoriasIl.style.height = "0px";
+        $categoriasIl.style.padding = "0";
+    }
+
 
 });
 
