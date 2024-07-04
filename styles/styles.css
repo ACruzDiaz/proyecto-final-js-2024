@@ -372,10 +372,42 @@ ul.nav-menu{
         position: fixed;
         z-index: 30;
         top: 4.5rem;
+        left: 52rem;
         display: flex;
         flex-direction: column;
         a{
             margin: 0.5rem 0;
         }
+    }
+}
+
+footer{
+    position: relative;
+    top: 5rem;
+    width: 68vw;
+}
+#historial-section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+    article.historial-item{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+}
+.tabla{
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+    #tabla-historial tr:nth-child(odd){
+        height: 2rem;
+        background-color: lightblue;
+    }
+    #tabla-historial tr:nth-child(even){
+        height: 2rem;
+        background-color: rgb(180, 230, 173);
     }
 }

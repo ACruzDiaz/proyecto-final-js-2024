@@ -1,0 +1,112 @@
+{
+  "registros": [
+    {
+      "0": {
+        "carrito": {
+          "articulosCarro": [
+            {
+              "sku": "768537",
+              "nombre": "Balón de basketball",
+              "cantidad": 17,
+              "precio": 25.99,
+              "descripcion": "Balón oficial de la NBA",
+              "categoria": "Basketball",
+              "imagen": "https://contents.mediadecathlon.com/p298557/k$74a7f525136224fac43390162df7b775/sq/Bal+n+de+baloncesto+SPALDING+NBA+ALL+STAR+talla+7.jpg",
+              "cantidadCarro": 2
+            },
+            {
+              "sku": "62351238",
+              "nombre": "Casco para ciclista",
+              "cantidad": 45,
+              "precio": 39.99,
+              "descripcion": "Casco fabricado en fibra de vidrio ofrece alta resistencia y ligereza al usuario",
+              "categoria": "Ciclismo",
+              "imagen": "https://th.bing.com/th/id/OIP.-hg-3-XYbkoWQ3otJ0HmHAHaHa?rs=1&pid=ImgDetMain",
+              "cantidadCarro": 2
+            },
+            {
+              "sku": "4325116",
+              "nombre": "Bicicleta de montaña",
+              "cantidad": 10,
+              "precio": 199.99,
+              "descripcion": "Bicicleta de montaña de 8 velocidades, marco de aluminio y llantas numero 16.",
+              "categoria": "Ciclismo",
+              "imagen": "https://th.bing.com/th/id/OIP.wlD7t_QIXBtL4XNB505wlwHaHa?rs=1&pid=ImgDetMain",
+              "cantidadCarro": 2
+            },
+            {
+              "sku": "65483836354",
+              "nombre": "Bastón de senderismo",
+              "cantidad": 9,
+              "precio": 39.99,
+              "descripcion": "Bastón para senderismo 130cm. Plegable colores varias prsentaciones",
+              "categoria": "Senderismo",
+              "imagen": "https://th.bing.com/th/id/OIP.KniePpVbyIRTkqgc8BWG4QHaHa?rs=1&pid=ImgDetMain",
+              "cantidadCarro": 1
+            }
+          ],
+          "estadoCarro": {
+            "cantidadArticulos": 7,
+            "precioTotal": "571.93"
+          }
+        },
+        "fecha": "2024-07-04T00:30:26.660Z"
+      },
+      "id": "94b1"
+    },
+    {
+      "0": {
+        "carrito": {
+          "articulosCarro": [
+            {
+              "sku": "768537",
+              "nombre": "Balón de basketball",
+              "cantidad": 17,
+              "precio": 25.99,
+              "descripcion": "Balón oficial de la NBA",
+              "categoria": "Basketball",
+              "imagen": "https://contents.mediadecathlon.com/p298557/k$74a7f525136224fac43390162df7b775/sq/Bal+n+de+baloncesto+SPALDING+NBA+ALL+STAR+talla+7.jpg",
+              "cantidadCarro": 2
+            },
+            {
+              "sku": "62351238",
+              "nombre": "Casco para ciclista",
+              "cantidad": 45,
+              "precio": 39.99,
+              "descripcion": "Casco fabricado en fibra de vidrio ofrece alta resistencia y ligereza al usuario",
+              "categoria": "Ciclismo",
+              "imagen": "https://th.bing.com/th/id/OIP.-hg-3-XYbkoWQ3otJ0HmHAHaHa?rs=1&pid=ImgDetMain",
+              "cantidadCarro": 2
+            },
+            {
+              "sku": "4325116",
+              "nombre": "Bicicleta de montaña",
+              "cantidad": 10,
+              "precio": 199.99,
+              "descripcion": "Bicicleta de montaña de 8 velocidades, marco de aluminio y llantas numero 16.",
+              "categoria": "Ciclismo",
+              "imagen": "https://th.bing.com/th/id/OIP.wlD7t_QIXBtL4XNB505wlwHaHa?rs=1&pid=ImgDetMain",
+              "cantidadCarro": 2
+            },
+            {
+              "sku": "65483836354",
+              "nombre": "Bastón de senderismo",
+              "cantidad": 9,
+              "precio": 39.99,
+              "descripcion": "Bastón para senderismo 130cm. Plegable colores varias prsentaciones",
+              "categoria": "Senderismo",
+              "imagen": "https://th.bing.com/th/id/OIP.KniePpVbyIRTkqgc8BWG4QHaHa?rs=1&pid=ImgDetMain",
+              "cantidadCarro": 1
+            }
+          ],
+          "estadoCarro": {
+            "cantidadArticulos": 7,
+            "precioTotal": "571.93"
+          }
+        },
+        "fecha": "2024-07-04T00:30:31.972Z"
+      },
+      "id": "b9c2"
+    }
+  ]
+}

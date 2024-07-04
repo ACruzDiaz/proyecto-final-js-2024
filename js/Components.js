@@ -1,4 +1,4 @@
-const Component = (function (){
+export const Component = (function (){
 
     const Constructor = function(options){
         this.el = options.el; //El es Elemento contenedor de nuestro template

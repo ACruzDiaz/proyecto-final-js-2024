@@ -1,3 +1,8 @@
+import {Component} from "./Components.js";
+import { d,jsonURL,$graciasCompraPantalla, $pagar, $botonAgregar, $categoriasIl} from "./global.js";
+import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2/+esm'
+
+let cLastState, listaArticulosCompleta, categoriasList = [], registrosList = [] ;
 const mainArticulos = new Component({
     el: "#catalogo",
     data: {
@@ -60,12 +65,33 @@ const categorias = new Component({
         if(props.listaArticulos.length < 1){
             return `<a href="#">( Vacio )</a>`
         }
-        let templateCategorias = props.listaArticulos.map(item => `<a href="#${item}" id="${item}">${item}</a>`).join("");
-        console.log(templateCategorias)
-        return templateCategorias;
+        let templateCategorias = props.listaArticulos.map(item => `
+            <a href="#${item}" id="${item}">${item}</a>`).join("");
+        
+        return `<a href="#todo" id= "todo">Mostrar todo</a>` + templateCategorias;
     },
 
 });
+
+const historial = new Component({
+    el: "#tabla-historial",
+    data: {
+        registros: []
+    },
+    template: function(props){
+        if(props.registros < 1){
+            return `<p style="text-align:center">Historial de compras vacio</p>`
+        }
+        let template = props.registros.map(item => `
+                <tr>
+                    <td class="tg-0lax">${item.id}</td>
+                    <td class="tg-0lax">${item['0'].carrito.estadoCarro.cantidadArticulos}</td>
+                    <td class="tg-0lax">$${item['0'].carrito.estadoCarro.precioTotal}</td>
+                    <td class="tg-0lax">${item['0'].fecha}</td>
+                </tr>`).join("");
+        return template;
+    },
+})
 
 d.addEventListener('DOMContentLoaded', e => {
     fetch(jsonURL, {
@@ -86,6 +112,8 @@ d.addEventListener('DOMContentLoaded', e => {
         categorias.setState({listaArticulos: categoriasList.listaArticulos});
         mainArticulos.setState({listaArticulos: lastState.listaArticulos});
         carrito.setState(JSON.parse(localStorage.getItem('articulosCarro')));
+        leerHistorial();
+        listaArticulosCompleta = mainArticulos.getState();
     }).catch((err) => {
         
         Swal.fire("Error al cargar el archivo JSON: ", err);
@@ -147,8 +175,8 @@ d.addEventListener('click', e => {
         
     }
     if(e.target.id == "btn_pagar"){
-        $graciasCompraPantalla.style.visibility = "visible";
-        document.body.style.overflow = "hidden";
+        registrarCompra();
+
     }
 
     if(e.target.className === "cross"){
@@ -170,6 +198,16 @@ d.addEventListener('click', e => {
         $categoriasIl.style.padding = "0";
     }
 
+    if(categorias.getState().listaArticulos.includes(e.target.id)){
+        const lastState = listaArticulosCompleta;
+        const filterItems = lastState.listaArticulos.filter(element => element.categoria == e.target.id);
+        mainArticulos.setState({listaArticulos: filterItems});
+    }
+
+    if(e.target.id === "todo"){
+        console.log(listaArticulosCompleta.listaArticulos)
+        mainArticulos.setState({listaArticulos: listaArticulosCompleta.listaArticulos});
+    }
 
 });
 
@@ -194,4 +232,48 @@ const vaciarCarrito = function(){
         estadoCarro:{cantidadArticulos:0,
                     precioTotal: 0,}});
     localStorage.setItem('articulosCarro', JSON.stringify(carrito.getState()));
+}
+
+const registrarCompra = function(){
+    //Obtener estado del carrito de compras
+    const miCarro = carrito.getState()
+    //Obtener la fecha actual
+    const fechaActual = new Date();
+    const registro = {
+        carrito: miCarro,
+        fecha: fechaActual,
+    }
+
+    registrosList.push(registro);
+    //Hacer push de  datos a archivo registros.json
+    fetch("http://localhost:3000/registros",{
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(registrosList),
+    })
+    .then((res) => {
+        $graciasCompraPantalla.style.visibility = "visible";
+        document.body.style.overflow = "hidden";
+            return res.ok ? res.json() : Promise.reject(res); 
+        }
+    )
+    .then((data) => {
+
+        console.log(data)
+        })
+    .catch((error) =>{console.log("NOOO MI COMPA", error)});
+    
+}
+
+const leerHistorial = function(){
+    fetch("./json/db.json", {
+    })
+    .then((res) => {
+        return res.ok? res.json(): Promise.reject(res);
+    })
+    .then((data) =>{
+        historial.setState({registros: data.registros})
+        console.log(data.registros)
+    })
+    .catch(err => console.log("Archivo Registro: ",err))
 }

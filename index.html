@@ -17,8 +17,9 @@
             <ul class="nav-menu">
                 <li id="categorias">Categorias </li>
                 <ul id="categorias-element">
-                    <a href="#e1" id="e1">Elemento 1</a>
+                    
                 </ul>
+                <li id = "historial"><a href="#historial-section">Historial</a></li>
             </ul>
             <div class="hamburguer">
                 <span class="bar"></span>
@@ -35,6 +36,7 @@
             
         </section>
     </main>
+
     <aside id="compra-exitosa">
         <div>
             <h1>Gracias Por tu compra!</h1>
@@ -47,9 +49,23 @@
 
         
     </aside>
-    <script src="./js/global.js"></script>
-    <script src="./js/Components.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./js/index.js"></script>
+    <footer>
+        <section id="historial-section">
+            <table class = "tabla">
+                <thead><tr>
+                    <td># Pedido</td>
+                    <td># Articulos</td>
+                    <td>Total</td>
+                    <td>Fecha</td>
+                </tr></thead>
+                <tbody id = "tabla-historial">
+
+                </tbody>
+            </table>
+        </section>
+    </footer>
+    <script type="module" src="./js/global.js"></script>
+    <script type="module" src="./js/Components.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
