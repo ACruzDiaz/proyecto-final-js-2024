@@ -246,7 +246,7 @@ const registrarCompra = function(){
 
     registrosList.push(registro);
     //Hacer push de  datos a archivo registros.json
-    fetch("http://localhost:3000/registros",{
+    fetch("/json/db.json",{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(registrosList),
