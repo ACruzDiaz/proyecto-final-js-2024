@@ -372,7 +372,7 @@ ul.nav-menu{
         position: fixed;
         z-index: 30;
         top: 4.5rem;
-        left: 52rem;
+        left: 42rem;
         display: flex;
         flex-direction: column;
         a{
@@ -384,12 +384,13 @@ ul.nav-menu{
 footer{
     position: relative;
     top: 5rem;
-    width: 68vw;
+    width: 62vw;
 }
 #historial-section{
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
+    padding-top: 5rem;
     padding-bottom: 1rem;
     article.historial-item{
         display: flex;
